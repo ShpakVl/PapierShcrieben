@@ -1,0 +1,11 @@
+﻿# Файлы и папки операционной системы
+.DS_Store
+Thumbs.db
+build/
+.idea
+
+*.log*
+node_modules/
+package-lock.json
+# Папка с собранными файлами проекта
+# build/

@@ -1,0 +1,43 @@
+@import ./libs/reset
+@import ./imports/_vars
+@import ./imports/_fonts
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+html
+  font-size: $font-size
+  font-family: $font-text
+
+html, body
+  width: 100%
+  min-height: 100vh
+  scroll-behavior: smooth
+  .page
+    display: flex
+    align-items: center
+    flex-direction: column
+    background: #FFFFFF
+    width: inherit
+    overflow: hidden
+
+main.wrapper
+  padding: 0 2rem
+  width: 100%
+  display: flex
+  justify-content: center
+  .container
+    display: flex
+    justify-content: center
+    flex-direction: column
+    max-width: 1180px
+    width: 100%
+
+@import imports/typo
+@import ./imports/btn
+@import ./imports/dropdown
+@import './imports/header'
+@import "./imports/thesis"
+@import "./imports/calculator"
+@import "./imports/datePicker"
