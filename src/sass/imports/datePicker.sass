@@ -11,14 +11,16 @@
   background-color: $bg
   box-shadow: 0px 1px 3px rgba(5, 41, 83, 0.14)
   border: 0.1rem solid transparent
-
+  min-width: 180px
+  max-width: 180px
   transition: all .15s linear
+  justify-content: center
 
   &:hover
     background-color: #F3F3F3
 
   .selected-date
-    width: 100%
+
     height: 100%
     display: flex
     justify-content: center
@@ -29,21 +31,24 @@
     display: none
     position: absolute
     top: 100%
-    left: 0
+
     right: 0
-    background-color: #FFF
     min-width: 320px
+    z-index: 10
+    background: $bg
 
 
     &.active
       display: block
+      box-shadow: $shadow-card
 
     .month
       display: flex
       justify-content: space-between
       align-items: center
       border-bottom: 2px solid #EEE
-
+      .mth
+        font-size: 1.5rem
       .arrows
         width: 40px
         height: 40px
@@ -54,10 +59,11 @@
         font-size: 20px
 
         &:hover
-          background-color: #F3F3F3
+          background-color: $addGreen
 
         &:active
-          background-color: #00CA85
+          background-color: $primary
+          color: white
 
     .days
       display: grid
@@ -69,6 +75,10 @@
         justify-content: center
         align-items: center
         color: #313131
-
+        font-size: 1.6rem
         &.selected
-          background-color: #00CA85
+          background-color: $primary
+          color: white
+          font-size: 1.6rem
+        &:hover
+          background : $addGreen

@@ -22,30 +22,47 @@
   .calculator__form-wrapper
     display: grid
     grid-template-rows: 1fr
-    grid-template-columns: 4fr 1fr
+    grid-template-columns: 80% 18.3%
+    gap: 2rem
 
     .calculator__form
       display: grid
-
+      gap: 2rem
+      width: 100%
       .workType
         grid-area: workType
+        width: 18rem
 
       .academicLevel
         grid-area: academicLevel
-
+        width: 18rem
       .input__wrapper
         grid-area: input__wrapper
-
+        width: 18rem
       .picker
         grid-area: picker
+        width: 180px
+        min-width: 180px
 
       .paperType
         grid-area: paperType
 
       .subj
         grid-area: subj
-      grid-template-areas: "workType academicLevel input__wrapper picker""paperType subj"
-
+      grid-template-areas: "workType academicLevel input__wrapper picker""paperType paperType subj subj"
+    .calculator__submit
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      gap: 2rem
+      align-items: center
+      h3
+        height: 50%
+        display: flex
+        text-align: center
+        vertical-align: center
+      button
+        width: 100%
 
 .input__wrapper
   background-color: $bg
@@ -53,7 +70,7 @@
   display: inline-flex
   justify-content: center
   align-items: center
-
+  max-width: 18rem
   button
     outline: none
     -webkit-appearance: none
