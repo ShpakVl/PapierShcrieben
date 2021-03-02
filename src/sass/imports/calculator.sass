@@ -1,4 +1,128 @@
-.caluclator__wrapper
+.calculator__wrapper
   margin-top: 110px
   margin-bottom: 300px
+  width: 100%
 
+  .calculator
+    width: inherit
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 6rem 10rem 6.5rem 10rem
+    box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16)
+    border-radius: 8px
+
+    .calculator__header
+      h2
+        margin-bottom: 1.6rem
+
+      p
+        margin-bottom: 2.5rem
+
+  .calculator__form-wrapper
+    display: grid
+    grid-template-rows: 1fr
+    grid-template-columns: 4fr 1fr
+
+    .calculator__form
+      display: grid
+
+      .workType
+        grid-area: workType
+
+      .academicLevel
+        grid-area: academicLevel
+
+      .input__wrapper
+        grid-area: input__wrapper
+
+      .picker
+        grid-area: picker
+
+      .paperType
+        grid-area: paperType
+
+      .subj
+        grid-area: subj
+      grid-template-areas: "workType academicLevel input__wrapper picker""paperType subj"
+
+
+.input__wrapper
+  background-color: $bg
+  box-shadow: 0px 1px 3px rgba(5, 41, 83, 0.14)
+  display: inline-flex
+  justify-content: center
+  align-items: center
+
+  button
+    outline: none
+    -webkit-appearance: none
+    background-color: $bg
+    border: none
+    align-items: center
+    justify-content: center
+    width: 3rem
+    height: 3rem
+    cursor: pointer
+    margin: 0
+    position: relative
+    padding: 1.2rem 2rem
+
+    &:before,
+    &:after
+      display: inline-block
+      position: absolute
+      content: ''
+      width: 1rem
+      height: 2px
+      background-color: #212121
+      transform: translate(-50%, -50%)
+
+    &.plus:after
+      transform: translate(-50%, -50%) rotate(90deg)
+
+.input
+  appearance: none
+  border: 1px solid $light-gray
+  background-color: $white
+
+  font-family: $font-text
+  font-size: 1.8rem
+  line-height: 2.7rem
+  color: $blue
+
+  border-radius: 1rem
+
+  padding: 1.2rem 2rem
+
+  transition: all .15s linear
+
+  max-height: 5rem
+
+  &::placeholder
+    color: #909090
+
+  &:focus
+    border: 1px solid $primary
+
+  &--num
+    background-color: $bg
+    width: 100%
+
+    font-family: $font-text
+    font-size: 1.8rem
+    line-height: 2.7rem
+    color: $blue
+    max-height: 5rem
+    padding: 1.2rem 0
+
+    -webkit-appearance: textfield
+    -moz-appearance: textfield
+
+    text-align: center
+
+    border: none
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button
+      -webkit-appearance: none

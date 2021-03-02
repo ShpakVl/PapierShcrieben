@@ -1,14 +1,61 @@
-.caluclator__wrapper
+.calculator__wrapper
     .calculator
         .calculator__header
             h2.text--blue Berechne den Preis
             p.p--sm.text--light-gray Bitte fülle alle nötigen Felder aus und der Preisrechner zeigt dir den Preis
-        .calculator__form
-            .date-picker
-                .selected-date
-                .dates
-                    .month
-                        .arrows.prev-mth &lt;
-                        .mth
-                        .arrows.next-mth &gt;
-                    .days
+        .calculator__form-wrapper
+            .calculator__form
+                .dropdown.workType(tabindex="0")
+                    label.dropdown__label#workType(data-value="") Work type
+                    ul.dropdown__list
+                        li.dropdown__item(data-value="1") Schreiben
+                        li.dropdown__item(data-value="2") Korrektur
+                        li.dropdown__item(data-value="3") Lektorat
+
+
+                .dropdown.academicLevel(tabindex="0")
+                    label.dropdown__label#academicLevel(data-value="") Academic Level
+                    ul.dropdown__list
+                        li.dropdown__item(data-value="1") Ausbildung
+                        li.dropdown__item(data-value="2") Bachelor
+                        li.dropdown__item(data-value="3") Master
+                        li.dropdown__item(data-value="4") Promotion
+
+
+                .input__wrapper
+                        button(onclick="this.parentNode.querySelector('input[type=number]').stepDown()")
+                        input.input--num(min='0' name='quantity' value='1' type='number')#count
+                        button.plus(onclick="this.parentNode.querySelector('input[type=number]').stepUp()")
+
+                .picker
+                    .selected-date.p--md#datePicker
+                    .dates
+                        .month
+                            .arrows.prev-mth &lt;
+                            .mth
+                            .arrows.next-mth &gt;
+                        .days
+
+                .dropdown.paperType(tabindex="0")
+                    label.dropdown__label#paperType(data-value="") Paper type
+                    ul.dropdown__list
+                        li.dropdown__item(data-value="1") Bachelorarbeit
+                        li.dropdown__item(data-value="2") Doktorarbeit
+                        li.dropdown__item(data-value="3") Essay
+                        li.dropdown__item(data-value="4") Exposé
+
+
+                .dropdown.subj(tabindex="0")
+                    label.dropdown__label#subj(data-value="") Academic Level
+                    ul.dropdown__list
+                        li.dropdown__item(data-value="1") Mathematik
+                        li.dropdown__item(data-value="2") Sprach- & Kulturwissenschaften
+                        li.dropdown__item(data-value="3") Medien & Kommunikation
+                        li.dropdown__item(data-value="4") Kunst, Gestaltung & Musik
+                        li.dropdown__item(data-value="5") Ingenieurwissenschaften
+                        li.dropdown__item(data-value="6") Medizin/Gesundheitswesen
+
+
+            .calculator__submit
+                h3.text--green.text--normal € 56.25
+                button.btn Anfragen
