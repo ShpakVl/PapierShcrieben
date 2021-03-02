@@ -3,13 +3,26 @@
   gap: .5rem
 
 .slider-inline__step
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
 
   &--active
     .slider-inline__number
       color: $primary
       background-color: $addGreen
 
+    .slider-inline__text
+      color: $primary
+
 .slider-inline__number
+  font-family: $font-title
+  font-size: 2.4rem
+  line-height: 2.4rem
+  text-align: center
+  color: $addDarkBlue
+  font-weight: bold
 
   width: 4rem
   height: 4rem
@@ -17,9 +30,21 @@
   border-radius: 50%
   background-color: $addBlue
 
-  font-family: $font-title
-  font-size: 2.4rem
-  line-height: 2.4rem
+  padding: 1rem
+  margin-bottom: 1rem
+
+.slider-inline__text
+  line-height: 150%
   text-align: center
   color: $addDarkBlue
-  p
+
+.slider-inline__division
+  background: $addBlue
+  border-radius: 4rem
+  height: 2px
+  width: 100%
+
+  margin-top: 1.9rem
+
+  &--active
+    background-color: $primary
