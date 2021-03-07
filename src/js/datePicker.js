@@ -31,13 +31,13 @@ next_mth_element.addEventListener('click', goToNextMonth);
 prev_mth_element.addEventListener('click', goToPrevMonth);
 
 // FUNCTIONS
-function toggleDatePicker (e) {
+function toggleDatePicker(e) {
     if (!checkEventPathForClass(e.path, 'dates')) {
         dates_element.classList.toggle('active');
     }
 }
 
-function goToNextMonth (e) {
+function goToNextMonth(e) {
     month++;
     if (month > 11) {
         month = 0;
@@ -47,7 +47,7 @@ function goToNextMonth (e) {
     populateDates();
 }
 
-function goToPrevMonth (e) {
+function goToPrevMonth(e) {
     month--;
     if (month < 0) {
         month = 11;
@@ -57,13 +57,13 @@ function goToPrevMonth (e) {
     populateDates();
 }
 
-function populateDates (e) {
+function populateDates(e) {
     days_element.innerHTML = '';
-    let amount = function(month, year) {
-            let date = new Date(year, month, 0).getDate();
-            return date;
+    let amount = function (month, year) {
+        let date = new Date(year, month, 0).getDate();
+        return date;
     };
-    let amount_days = amount(month+1,year);
+    let amount_days = amount(month + 1, year);
     for (let i = 0; i < amount_days; i++) {
 
         const day_element = document.createElement('div');
@@ -91,7 +91,7 @@ function populateDates (e) {
 }
 
 // HELPER FUNCTIONS
-function checkEventPathForClass (path, selector) {
+function checkEventPathForClass(path, selector) {
     for (let i = 0; i < path.length; i++) {
         if (path[i].classList && path[i].classList.contains(selector)) {
             return true;
@@ -100,7 +100,8 @@ function checkEventPathForClass (path, selector) {
 
     return false;
 }
-function formatDate (d) {
+
+function formatDate(d) {
     let day = d.getDate();
     if (day < 10) {
         day = '0' + day;
@@ -113,5 +114,5 @@ function formatDate (d) {
 
     let year = d.getFullYear();
 
-    return day + '  ' + months[month-1] + '  ' + year;
+    return day + '  ' + months[month - 1] + '  ' + year;
 }
