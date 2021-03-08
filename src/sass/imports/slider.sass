@@ -8,6 +8,11 @@
     max-width: 40%
 .slider__slide
     max-width: 40%
+    display: none
+
+    &.slider--active
+        display: block
+
 .slider__btn
     cursor: pointer
     display: flex
@@ -23,14 +28,14 @@
     p
         pointer-events: none
 
-.slider--active
-    span
-        border-bottom: 1px solid $primary
-        width: 30px
-        margin-right: 10px
+    &.slider--active
+        span
+            border-bottom: 1px solid $primary
+            width: 30px
+            margin-right: 10px
 
-    p
-        color: $primary
+        p
+            color: $primary
 .slider__content
     color: $light-gray
     div
