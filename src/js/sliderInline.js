@@ -22,6 +22,8 @@ const onClick = e =>
     {
       const parent = btn.parentElement
       console.log('12321')
+      console.log('12321')
+
       if (parent.classList.contains(active))
       {
         parent.classList.remove(active)
