@@ -21,7 +21,7 @@ const onClick = e =>
   btns.map(btn => 
     {
       const parent = btn.parentElement
-      
+      console.log('12321')
       if (parent.classList.contains(active))
       {
         parent.classList.remove(active)
