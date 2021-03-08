@@ -1,3 +1,4 @@
+include ./mixins.pug
 .feedback__wrapper 
   .feedback__header 
     .feedback__title
@@ -5,28 +6,40 @@
     .feedback__text
       p.p.p--md.text--light-gray Lass dich von den Erfolgsgeschichten unserer Kunden inspirieren!
   .feedback__content
-    .card__wrapper
-      .card
-        .card__header
-          .card__quote
-            img(src="./img/quote.svg", alt="")
-          .card__rating
-            .card__number.text--light-gray 5.0
-            ul.card__list
-              li.card__item
-                img(src="./img/star.svg", alt="")
-              li.card__item
-                img(src="./img/star.svg", alt="")
-              li.card__item
-                img(src="./img/star.svg", alt="")
-              li.card__item
-                img(src="./img/star.svg", alt="")
-              li.card__item
-                img(src="./img/star.svg", alt="")
+    +card(4.2, "./img/avatar.png", 21015, "Bachelorarbeit|Geisteswissenschaften")
+      p.p.p--md.text--italic.text--light-gray Ich wollte mich recht herzlich bei Ihnen für die tolle Analyse bedanken - ich habe die Note A+ bekommen. Tausend Dank für die tolle Arbeit und liebe Grüße aus Wien
 
-        .card__body
-          p.p
+    +card(4.2, "./img/avatar.png", 21015, "Bachelorarbeit|Geisteswissenschaften")
+      p.p.p--md.text--italic.text--light-gray Ich wollte mich recht herzlich bei Ihnen für die tolle Analyse bedanken - ich habe die Note A+ bekommen. Tausend Dank für die tolle Arbeit und liebe Grüße aus Wien
 
-        .card__footer
+    +card(4.2, "./img/avatar.png", 21015, "Bachelorarbeit|Geisteswissenschaften")
+      p.p.p--md.text--italic.text--light-gray Ich wollte mich recht herzlich bei Ihnen für die tolle Analyse bedanken - ich habe die Note A+ bekommen. Tausend Dank für die tolle Arbeit und liebe Grüße aus Wien
+    
+    +card(4.2, "./img/avatar.png", 21015, "Bachelorarbeit|Geisteswissenschaften")
+      p.p.p--md.text--italic.text--light-gray Ich wollte mich recht herzlich bei Ihnen für die tolle Analyse bedanken - ich habe die Note A+ bekommen. Tausend Dank für die tolle Arbeit und liebe Grüße aus Wien
+    
+    +card(4.2, "./img/avatar.png", 21015, "Bachelorarbeit|Geisteswissenschaften")
+      p.p.p--md.text--italic.text--light-gray Ich wollte mich recht herzlich bei Ihnen für die tolle Analyse bedanken - ich habe die Note A+ bekommen. Tausend Dank für die tolle Arbeit und liebe Grüße aus Wien
+    
+    +card(4.2, "./img/avatar.png", 21015, "Bachelorarbeit|Geisteswissenschaften")
+      p.p.p--md.text--italic.text--light-gray Ich wollte mich recht herzlich bei Ihnen für die tolle Analyse bedanken - ich habe die Note A+ bekommen. Tausend Dank für die tolle Arbeit und liebe Grüße aus Wien
+    
+    +card(4.2, "./img/avatar.png", 21015, "Bachelorarbeit|Geisteswissenschaften")
+      p.p.p--md.text--italic.text--light-gray Ich wollte mich recht herzlich bei Ihnen für die tolle Analyse bedanken - ich habe die Note A+ bekommen. Tausend Dank für die tolle Arbeit und liebe Grüße aus Wien
+    
+    +card(4.2, "./img/avatar.png", 21015, "Bachelorarbeit|Geisteswissenschaften")
+      p.p.p--md.text--italic.text--light-gray Ich wollte mich recht herzlich bei Ihnen für die tolle Analyse bedanken - ich habe die Note A+ bekommen. Tausend Dank für die tolle Arbeit und liebe Grüße aus Wien
   
   .feedback__footer
+    .feedback__add
+      button.btn--link.text--green Feedback hinzufügen
+    .carousel__nav
+      ul.carousel__nav_list
+        li.carousel__nav_item
+          button.carousel__btn.carousel--active(data-id="1" data-carousel="feedback")
+        li.carousel__nav_item
+          button.carousel__btn(data-id="2" data-carousel="feedback")
+        li.carousel__nav_item
+          button.carousel__btn(data-id="3" data-carousel="feedback")
+        li.carousel__nav_item
+          button.carousel__btn(data-id="4" data-carousel="feedback")

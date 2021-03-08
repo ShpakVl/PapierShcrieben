@@ -17,3 +17,33 @@ mixin sliderList
 
 mixin slideInline
   block
+
+mixin card(rating, avatarUrl, id, specialty)
+  .card__wrapper
+      .card
+        .card__header
+          .card__quote
+            img(src="./img/quote.svg", alt="")
+          .card__rating
+            .card__number.text--light-gray= rating
+            ul.card__list
+              li.card__item
+                img(src="./img/star.svg", alt="")
+              li.card__item
+                img(src="./img/star.svg", alt="")
+              li.card__item
+                img(src="./img/star.svg", alt="")
+              li.card__item
+                img(src="./img/star.svg", alt="")
+              li.card__item
+                img(src="./img/star.svg", alt="")
+
+        .card__body
+          block
+
+        .card__footer
+          .card__profile
+            img.card__avatar(src=avatarUrl, alt="")
+            p.p.p--sm.text--light-gray ID: #{id}
+          .card__specialty
+            p.p.p--sm.text--light-gray= specialty
