@@ -1,5 +1,5 @@
 const btns = Array.from(document.querySelectorAll('.slider-inline__number'))
-const slides = Array.from(document.querySelectorAll('.slider-inline__slide'))
+const slidesInline = Array.from(document.querySelectorAll('.slider-inline__slide'))
 
 const active = 'slider-inline--active'
 
