@@ -7,35 +7,70 @@
   .steps__content
     .slider-inline 
       .slider-inline__steps 
-        .slider-inline__step.slider-inline--active(slideId="slide-1")
+        .slider-inline__step.slider-inline--active(data-id="slide-1")
           .slider-inline__number 1
           .slider-inline__text
             p.p.p--sm Das passende Thema finden
 
         .slider-inline__division
 
-        .slider-inline__step(slideId="slide-2")
+        .slider-inline__step(data-id="slide-2")
           .slider-inline__number 2
           .slider-inline__text
             p.p.p--sm Die Gliederung erstellen
 
         .slider-inline__division
         
-        .slider-inline__step(slideId="slide-3")
+        .slider-inline__step(data-id="slide-3")
           .slider-inline__number 3
           .slider-inline__text
             p.p.p--sm Die Facharbeit schreiben
 
         .slider-inline__division
 
-        .slider-inline__step(slideId="slide-4")
+        .slider-inline__step(data-id="slide-4")
           .slider-inline__number 4
           .slider-inline__text
             p.p.p--sm Die Facharbeit überprüfen (lassen)
 
       .slider-inline__content
         .slider-inline__slide.slider-inline--active#slide-1
-        .slider-inline__slide#slide-2 
-        .slider-inline__slide#slide-3 
-        .slider-inline__slide#slide-4 
+          .slider-inline__header
+            h3.text--blue Schritt 1
+            h2.text--blue  Die Facharbeit schreiben:
+          .slide__wrapper
+            .slider__list_wrapper
+              ul.slider__list
+                li.text--lg.text--light-gray.slider__btn.slider__btn--active(data-id="slide-2") 
+                  span
+                  p Die Einleitung schreiben
+                li.text--lg.text--light-gray.slider__btn(data-id="slide-1") 
+                  span
+                  p Einführung
+                li.text--lg.text--light-gray.slider__btn(data-id="slide-3") 
+                  span
+                  p Den Hauptteil verfassen
+                li.text--lg.text--light-gray.slider__btn(data-id="slide-4") 
+                  span 
+                  p Das Fazit schreiben
+                li.text--lg.text--light-gray.slider__btn(data-id="slide-5") 
+                  span
+                  p Richtig zitieren will gelernt sein!
+            .slider__slide
+              .slider__content
+                p.p--sm Die Einleitung enthält diese Elemente:
+                ul.content__list
+                  li.content__item.p--sm 
+                    span 1. 
+                    p.p--sm Einführung in das Thema und die Frage, die behandelt wird.
+                  li.content__item.p--sm 
+                    span 2. 
+                    p.p--sm Übersicht über die inhaltliche Vorgehensweise und die Struktur der Arbeit.
+                  li.content__item.p--sm 
+                    span 3.
+                    p.p--sm Formulierung des Ziels der Arbeit und Erläuterung der notwendigen Schritte, um dieses zu erreichen.
+                div
+                  span.p--sm  Übrigens:
+                  p.p--sm Die Einleitung macht fünf bis zehn Prozent der Facharbeit aus.
+
         
