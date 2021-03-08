@@ -5,11 +5,12 @@ const onClickSlide = e =>
 {
   const target = e.target
   const dataId = target.getAttribute('data-id')
+  const stepId = target.getAttribute('data-step-id')
 
-  document.querySelector(`.slider__btn.${activeSlide}`).classList.remove(activeSlide)
+  document.querySelector(`.slider__btn.${activeSlide}[data-step-id=${stepId}]`).classList.remove(activeSlide)
   target.classList.add(activeSlide)
-  // СДЕЛАТЬ СРАВНЕНИЕ ПО АЙДИ ИЛИ ЕЩЕ КАК-ТО ЧТОБЫ УБИРАЛСЯ СЛАЙД В ДАННОМ СТЕПЕ
-  document.querySelector(`.slider__slide.${activeSlide}`).classList.remove(activeSlide)
+  
+  document.querySelector(`.slider-inline__slide#${stepId} .slider__slide.${activeSlide}`).classList.remove(activeSlide)
   document.querySelector(`.slider__slide#${dataId}`).classList.add(activeSlide)
 }
 
