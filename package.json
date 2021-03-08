@@ -6,7 +6,8 @@
   "scripts": {
     "start": "gulp start",
     "build": "gulp build",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "dev": "gulp dev"
   },
   "author": "",
   "license": "ISC",

@@ -1,18 +1,17 @@
-const bnts = Array.from(document.querySelectorAll('.slider__btn'))
-const slides = Array.from(document.querySelectorAll('.slider__slide'))
+const btnsSlider = Array.from(document.querySelectorAll('.slider__btn'))
 
-const active = 'slider--active'
+const activeSlide = 'slider--active'
 
-const onClick = e =>
+const onClickSlide = e =>
 {
   const target = e.target
+  console.log(target)
   const slideId = target.getAttribute('data-id')
+  document.querySelector(`.slider__btn.${activeSlide}`).classList.remove(activeSlide)
+  target.classList.add(activeSlide)
 
-  document.querySelector(`.slider__btn.${active}`).classList.remove(active)
-  target.classList.add(active)
-
-  document.querySelector(`.slider__slide.${active}`).classList.remove(active)
-  document.querySelector(`.slider__slide#${slideId}`).classList.add(active)
+  document.querySelector(`.slider__slide.${activeSlide}`).classList.remove(activeSlide)
+  document.querySelector(`.slider__slide#${slideId}`).classList.add(activeSlide)
 }
 
-btns.map(btn => btn.onclick = e => onClick(e))
+btnsSlider.map(btn => btn.onclick = e => onClickSlide(e))
