@@ -1,0 +1,19 @@
+mixin slide(id, isActive)
+  if isActive
+    - var classes = "slider--active"
+  else 
+    - var classes = ""
+  
+  .slider__slide(class= classes id= id)
+    .slider__content
+      if block 
+        block
+      else 
+        p No info :(
+
+mixin sliderList
+  .slider__list_wrapper
+    block
+
+mixin slideInline
+  block
