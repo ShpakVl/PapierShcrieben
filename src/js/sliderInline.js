@@ -17,13 +17,10 @@ const onClick = e =>
 {
   const step = e.target.parentElement
   const slideId = step.getAttribute('slideId')
-  console.log(slideId)
+  
   btns.map(btn => 
     {
       const parent = btn.parentElement
-      console.log('12321')
-      console.log('12321')
-
       if (parent.classList.contains(active))
       {
         parent.classList.remove(active)
