@@ -1,5 +1,4 @@
 const btnsSlider = Array.from(document.querySelectorAll('.slider__btn'))
-
 const activeSlide = 'slider--active'
 
 const onClickSlide = e =>
