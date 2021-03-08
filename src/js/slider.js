@@ -1,5 +1,4 @@
-const bnts = Array.from(document.querySelectorAll('.slider__btn'))
-const slides = Array.from(document.querySelectorAll('.slider__slide'))
+const btns = Array.from(document.querySelectorAll('.slider__btn'))
 
 const active = 'slider--active'
 
