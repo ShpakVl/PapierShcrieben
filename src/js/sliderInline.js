@@ -1,5 +1,4 @@
 const btns = Array.from(document.querySelectorAll('.slider-inline__number'))
-const divisions = document.querySelectorAll('.slider-inline__division')
 const slides = Array.from(document.querySelectorAll('.slider-inline__slide'))
 
 const active = 'slider-inline--active'
@@ -16,7 +15,7 @@ const setActive = (target) =>
 const onClick = e =>
 {
   const step = e.target.parentElement
-  const slideId = step.getAttribute('slideId')
+  const slideId = step.getAttribute('data-id')
   
   btns.map(btn => 
     {
@@ -30,9 +29,8 @@ const onClick = e =>
     })
 
   setActive(step)
-
-  slides.map(slide => slide.classList.remove(active))
-
+  
+  document.querySelector(`.slider-inline__slide.${active}`).classList.remove(active)
   document.querySelector(`.slider-inline__slide#${slideId}`).classList.add(active)
 }
 
