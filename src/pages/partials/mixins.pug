@@ -54,19 +54,29 @@ mixin articleWrapper(reverse=false)
   .article__wrapper(class=classes)
     block
 
-mixin article(title="Untitled")
-  .article__content
+mixin article(title="Untitled", pt=false, ptmd=false, ptsm=false)
+  if pt
+    - var classes = "article__content--pt"
+  if ptmd
+    - var classes = "article__content--pt-md"
+  if ptsm
+    - var classes = "article__content--pt-sm"
+
+  .article__content(class=classes)
     .article__title
         h1.text--blue=title
     .article__text
         block
     
-mixin articleInfo(imageUrl, note=false)
+mixin articleInfo(imageUrl, note=false, noteMb=false)
   .article__info
     img.article__img(src=imageUrl alt="Error")
 
+    if noteMb 
+      - var classes = "note--mb"
+
     if note
-      .note
+      .note(class=classes)
         .note__header
             .note__icon
                 img(src="./img/card-icon.svg", alt="card")
@@ -75,6 +85,8 @@ mixin articleInfo(imageUrl, note=false)
         .note__content
             block
 
-mixin articleFooter()
-  .article__footer
+mixin articleFooter(center=false)
+  if center
+      - var classes = "article__footer--center"
+  .article__footer(class=classes)
     block

@@ -1,0 +1,52 @@
+include ./mixins.pug
+
+.advantages__wrapper
+  section.advantage__section
+    +articleWrapper
+      +article("Unsere Ghostwriter für Deine Facharbeit - 3 Phasen des Schreibens", true)
+        p.p.p--md.text--light-gray Entscheidest Du Dich dazu, uns mit dem Schreiben Deiner Facharbeit zu beauftragen (beispielsweise, da Du den Abgabetermin sonst nicht einhalten kannst), profitierst Du von vielen Vorteilen (s.u.). Unsere Autoren arbeiten höchst professionell und erstellen Deine wissenschaftliche Arbeit in drei Phasen:
+      +articleInfo("./img/advantage-1.png")
+      +articleFooter(true)
+        .slider__wrapper#advantage
+          +sliderList
+            ul.slider__list
+              li.text--lg.text--light-gray.slider__btn.slider--active(data-id="advantageSlide-1" data-slider-id="advantage")
+                span
+                p Vorbereitungsphase
+              li.text--lg.text--light-gray.slider__btn(data-id="advantageSlide-2" data-slider-id="advantage")
+                span
+                p Schreibphase
+              li.text--lg.text--light-gray.slider__btn(data-id="advantageSlide-3" data-slider-id="advantage")
+                span
+                p Nachbereitungsphase
+          +slide("advantageSlide-1", true)
+            p.p.p--md SLIDE 1 In der Vorbereitungsphase findet der Ghostwriter ein geeignetes Thema und er recherchiert nach wissenschaftlicher Literatur. Darauf aufbauend erstellt er die Gliederung für Deine Facharbeit.
+          +slide("advantageSlide-2")
+            p.p.p--md SLIDE 2 In der Vorbereitungsphase findet der Ghostwriter ein geeignetes Thema und er recherchiert nach wissenschaftlicher Literatur. Darauf aufbauend erstellt er die Gliederung für Deine Facharbeit.
+          +slide("advantageSlide-3")
+            p.p.p--md SLIDE 31 In der Vorbereitungsphase findet der Ghostwriter ein geeignetes Thema und er recherchiert nach wissenschaftlicher Literatur. Darauf aufbauend erstellt er die Gliederung für Deine Facharbeit.
+
+  section.advantage__section.advantage__section--mb
+    +articleWrapper(true)
+      +article("Deine Vorteile auf einen Blick", false, true)
+        ul.advantage__list.text--light-gray
+          li.advantage__item Wir arbeiten auf wissenschaftlichem Niveau und fertigen Deine Facharbeit in Rekordzeit an.
+          li.advantage__item Egal, ob Komplettlösung (= Erstellen einer Facharbeit) oder einzelne Leistung (Korrekturlesen o.Ä.) - unsere Experten wissen, worauf es ankommt.
+          li.advantage__item Du profitierst von kostengünstigen Preisen und einer professionellen Betreuung.
+          li.advantage__item Wir behandeln Deinen Auftrag diskret.
+          li.advantage__item Wir halten unsere Termine garantiert ein.
+      +articleInfo("./img/advantage-2.png")
+
+  section.advantage__section 
+    +articleWrapper
+      +article("Unbedingt beachten: typische Fehler, die Lernende begehen")
+        p.p.p--md.text--light-gray Das Befolgen sämtlicher wissenschaftlicher Regeln und die sinnvolle, verständliche Darstellung der wesentlichen Aspekte eines Themas können trotz den obigen Hilfen eine große Herausforderung sein. Und zwar insbesondere für den „Anfänger“. Es kann z.B. passieren, dass man bei der schier unendlichen Auswahl an Sekundärliteratur den Überblick verliert. Und obwohl die Fragestellung aus allen möglichen Perspektiven erörtert werden soll, ist beispielsweise dennoch auf eine Balance zwischen der Anzahl an Perspektiven und deren Zusammenhang zur Fragestellung zu achten.
+        p.p.p--md.text--light-gray Des Weiteren sammeln viele Studierende zu wenige Quellen; sie beschränken sich auf leicht zugängliche und somit nicht immer dem akademischen Standard entsprechende Literatur. Hieraus ergibt sich auch die Gefahr, dass die Informationen eines Werks unpassend und/oder überholt sind.
+      +articleInfo("./img/advantage-3.png")
+
+  section.advantage__section
+    +articleWrapper(true)
+      +article("", false, false, true)
+        p.p.p--md.text--light-gray Tippfehler, grammatikalische Fehler und eine unpassende äußere Form (Schriftgröße etc.) machen ebenfalls einen schlechten Eindruck. Um dies zu vermeiden, muss die Facharbeit immer wieder überprüft und korrigiert werden. Ein Dozent wird sofort merken, wenn nicht gründlich gearbeitet wurde! Eine unachtsame Arbeitsweise steht synonym für die negativ behaftete Einstellung des/der Studierenden zu der Aufgabe und somit gegen den Autor selbst.
+      +articleInfo("./img/advantage-4.svg", true, true)
+        p.p.p--md.text--light-gray Das Sichten, Auswählen und Sortieren von Quellen nimmt viel Zeit in Anspruch und ist äußerst arbeitsintensiv.
