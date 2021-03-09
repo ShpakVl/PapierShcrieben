@@ -47,3 +47,34 @@ mixin card(rating, avatarUrl, id, specialty)
             p.p.p--sm.text--light-gray ID: #{id}
           .card__specialty
             p.p.p--sm.text--light-gray= specialty
+
+mixin articleWrapper(reverse=false)
+  if reverse
+    - var classes = "article__wrapper--reverse"
+  .article__wrapper(class=classes)
+    block
+
+mixin article(title="Untitled")
+  .article__content
+    .article__title
+        h1.text--blue=title
+    .article__text
+        block
+    
+mixin articleInfo(imageUrl, note=false)
+  .article__info
+    img.article__img(src=imageUrl alt="Error")
+
+    if note
+      .note
+        .note__header
+            .note__icon
+                img(src="./img/card-icon.svg", alt="card")
+            .note__title
+                h5.text--blue Merke:
+        .note__content
+            block
+
+mixin articleFooter()
+  .article__footer
+    block

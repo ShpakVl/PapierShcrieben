@@ -1,0 +1,49 @@
+.article__wrapper
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.article__content
+  width: 52%
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  gap: 2rem
+
+.article__title
+  line-height: 5rem
+.article__text
+  line-height: 2.7rem
+  display: flex
+  flex-direction: column
+  gap: 2rem
+
+.article__footer
+  margin-top: 3rem
+
+.article__info
+  position: relative
+  max-width: 48%
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  
+.article__img
+  position: absolute
+  width: 100%
+  right: -6rem
+  top: 0
+
+.article__wrapper--reverse
+  flex-direction: row-reverse
+  .article__content
+    margin-top: 8.8rem
+  .article__info
+    position: relative
+    max-width: 48%
+    width: 100%
+    .article__img
+      position: absolute
+      left: -30%
+      width: 120%

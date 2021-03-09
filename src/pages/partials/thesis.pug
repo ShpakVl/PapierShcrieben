@@ -1,34 +1,21 @@
+include ./mixins.pug
 .thesis-wrapper
     section.thesis__section
-        .article__wrapper
-            .article__content
-                .article__title
-                    h1.text--blue Die Facharbeit schreiben – Anforderungen, Gliederungund typische Fehler
-                .article__text
-                    p.p--md.text--light-gray Du bist auf der Suche nach einem professionellen Ghostwriter, kannst aber den passenden Autor nicht finden? Kein Wunder, denn im Internet gibt es eine schier unendliche Anzahl an Angeboten! Da kann man sich bei der Auswahl leicht irren. Aber nicht bei uns! Die Autoren unserer Agentur schreiben wissenschaftliche Facharbeiten in bester Qualität, die sich stets nach den Bedürfnissen des Auftraggebers richten.
-                    p.p--md.text--light-gray Wir bieten unseren Kunden eine lange Reihe von Schreibdienstleistungen: Themenfindung, Hilfe bei der Literaturrecherche, Verfassen von wissenschaftlichen Arbeiten (Haus-, Seminar-, Bachelor-, Masterarbeit usw.), Korrekturlesen, Lektorat und Plagiatsprüfung. Diese Leistungen stehen nicht nur auf Deutsch, sondern beispielsweise auch auf Englisch zur Verfügung.
-                .article__footer
-                    button.btn Probier jetzt aus
-            .article__image
-                img.arcticle__img(src="./img/promo-image.png" alt='promo')
+        +articleWrapper
+            +article("Die Anforderungen an eine Facharbeit")
+                p.p--md.text--light-gray Du bist auf der Suche nach einem professionellen Ghostwriter, kannst aber den passenden Autor nicht finden? Kein Wunder, denn im Internet gibt es eine schier unendliche Anzahl an Angeboten! Da kann man sich bei der Auswahl leicht irren. Aber nicht bei uns! Die Autoren unserer Agentur schreiben wissenschaftliche Facharbeiten in bester Qualität, die sich stets nach den Bedürfnissen des Auftraggebers richten.
+                p.p--md.text--light-gray Wir bieten unseren Kunden eine lange Reihe von Schreibdienstleistungen: Themenfindung, Hilfe bei der Literaturrecherche, Verfassen von wissenschaftlichen Arbeiten (Haus-, Seminar-, Bachelor-, Masterarbeit usw.), Korrekturlesen, Lektorat und Plagiatsprüfung. Diese Leistungen stehen nicht nur auf Deutsch, sondern beispielsweise auch auf Englisch zur Verfügung.
+
+            +articleInfo("./img/promo-image.png")
+            
+            +articleFooter
+                button.btn Probier jetzt aus
 
     section.thesis__section
-        .article__wrapper.article__wrapper--reverse
-            .article__content
-                .article__title
-                    h1.text--blue Die Anforderungen an eine Facharbeit
-                .article__text
-                    p.p--md.text--light-gray In Deutschland, sprich: an verschiedenen Schulen bestehen zum Teil deutliche Unterschiede hinsichtlich den Anforderungen an eine Facharbeit; sie beziehen sich vor allem auf den Umfang, die gewährte Schreibfrist und den Grad an notwendigen Kompetenzen. Zudem können die Erwartungen der einzelnen Dozenten mehr oder weniger weit auseinanderliegen.
-                    p.p--md.text--light-gray Da die wissenschaftliche Aufgabe normalerweise die erste Begegnung mit dem akademischen Anspruch an Selbständigkeit, Wissensvolumen und Kohärenz ist, stellt die Facharbeit für die meisten Schüler und Schülerinnen eine große Herausforderung dar.
-                .article__footer
-            .article__info
-                img.arcticle__img(src="./img/requirements-image.png" alt='requirements')
-
-                .note
-                    .note__header
-                        .note__icon
-                            img(src="./img/card-icon.svg", alt="card")
-                        .note__title
-                            h5.text--blue Merke:
-                    .note__content
-                        p.p.p--sm.text--light-gray Das Verfassen einer Facharbeit stellt eine Art Vorbereitung auf den Studienabschluss dar; nicht selten brauchen die angehenden Studenten und Studentinnen Hilfe, um sich nicht in den Mustern, denen sie folgen sollten, zu verlieren.
+        +articleWrapper(true)
+            +article("Die Anforderungen an eine Facharbeit")
+                p.p--md.text--light-gray In Deutschland, sprich: an verschiedenen Schulen bestehen zum Teil deutliche Unterschiede hinsichtlich den Anforderungen an eine Facharbeit; sie beziehen sich vor allem auf den Umfang, die gewährte Schreibfrist und den Grad an notwendigen Kompetenzen. Zudem können die Erwartungen der einzelnen Dozenten mehr oder weniger weit auseinanderliegen.
+                p.p--md.text--light-gray Da die wissenschaftliche Aufgabe normalerweise die erste Begegnung mit dem akademischen Anspruch an Selbständigkeit, Wissensvolumen und Kohärenz ist, stellt die Facharbeit für die meisten Schüler und Schülerinnen eine große Herausforderung dar.
+            
+            +articleInfo("./img/requirements-image.png", true)
+                p.p.p--sm.text--light-gray Das Verfassen einer Facharbeit stellt eine Art Vorbereitung auf den Studienabschluss dar; nicht selten brauchen die angehenden Studenten und Studentinnen Hilfe, um sich nicht in den Mustern, denen sie folgen sollten, zu verlieren.
