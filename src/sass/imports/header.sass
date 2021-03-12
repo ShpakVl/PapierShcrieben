@@ -16,6 +16,7 @@ header
 .header__logo
   display: flex
   align-items: center
+  gap: 2rem
   .logo
   .logo--text
     display: flex
@@ -35,6 +36,10 @@ header
       .navbar__link
         display: flex
         align-items: center
+        cursor: pointer
+
+        &:hover
+          text-decoration: underline
         .mobile--icon
           margin-right: 0.7rem
     .navbar__icon

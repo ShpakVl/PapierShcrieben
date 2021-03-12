@@ -8,7 +8,8 @@ const img = require('./gulp/img')
 
 const server = require('browser-sync').create()
 
-const start = function start(cb) {
+const start = function start(cb)
+{
     server.init({
         server: 'build',
         notify: false,
@@ -16,6 +17,10 @@ const start = function start(cb) {
         cors: true
     })
 
+    return cb()
+}
+
+const watch = function watch(cb) {
     gulp.watch(
         './src/sass/**/*.sass',
         gulp.series(sassToCss, cb => gulp.src('./build/css').pipe(server.stream()).on('end', cb))
@@ -36,6 +41,6 @@ const start = function start(cb) {
 }
 
 module.exports.start = start
-module.exports.dev = gulp.series(build, start)
+module.exports.dev = gulp.series(build, start, watch)
 module.exports.clean = clean
 module.exports.build = build
