@@ -8,7 +8,7 @@ const toggleMenu = target => {
 
     active && active !== target ? active.classList.toggle(classActive) : false
 
-    !target.classList.contains('dropdown__item') ? [classActive, classArrow].map(cl => target.classList.toggle(cl)) : false
+    !target.classList.contains('dropdown__item') ? toggleClass(target, [classActive, classArrow]) : false
 }
 
 const selectOption = target => {
@@ -22,7 +22,7 @@ const selectOption = target => {
 }
 const onBlur = () => {
     const active = document.querySelector(`.${classActive}`)
-    active ? active.classList.toggle(classActive) : false
+    active ? toggleClass(active, [classActive, classArrow]) : false
 }
 dropdowns.map(dropdown => {
     dropdown.onclick = e => toggleMenu(e.target)
