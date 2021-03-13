@@ -68,9 +68,11 @@ mixin article(title="Untitled", pt=false, ptmd=false, ptsm=false)
     .article__text
         block
     
-mixin articleInfo(imageUrl, note=false, noteMb=false)
+mixin articleInfo(imageUrl, note=false, noteMb=false, imgMl=false)
+  if imgMl 
+    - var imgClasses = 'article__img--ml'
   .article__info
-    img.article__img(src=imageUrl alt="Error")
+    img.article__img(src=imageUrl alt="Error" class=imgClasses)
 
     if noteMb 
       - var classes = "note--mb"

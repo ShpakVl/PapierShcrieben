@@ -41,12 +41,6 @@
   flex-direction: column
   justify-content: flex-end
 
-.article__img
-  position: absolute
-  width: 100%
-  right: -6rem
-  top: 0
-
 .article__wrapper--reverse
   flex-direction: row-reverse
   .article__info
@@ -57,3 +51,14 @@
       position: absolute
       left: -30%
       width: 120%
+
+.article__img
+  position: absolute
+  width: 100%
+  right: -6rem
+  top: 0
+
+  &--ml
+    top: 1rem !important
+    left: -15% !important
+    width: inherit !important
