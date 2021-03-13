@@ -1,3 +1,5 @@
+include ./mixins.pug
+
 .faq__wrapper
   .faq
     .faq__header
@@ -5,10 +7,15 @@
         h1.text--blue FAQ
     
     .faq__content 
-      .faq__card.faq__card--open
-        .faq__card__header.arrow
-          h4.text--blue.text--bold Wann muss ich eine Facharbeit schreiben?
-        .faq__card__line
-        .faq__card__content
-          p.p.p--md.text--light-gray Eine Facharbeit wird für gewöhnlich in der Oberstufe geschrieben. Sie stellt eine Art Vorbereitung auf das wissenschaftliche Arbeiten an der Universität dar.
+      +faqCard("Wann muss ich eine Facharbeit schreiben?", true)
+        p.p.p--md.text--light-gray Eine Facharbeit wird für gewöhnlich in der Oberstufe geschrieben. Sie stellt eine Art Vorbereitung auf das wissenschaftliche Arbeiten an der Universität dar.
+
+      +faqCard("Was gehört in eine Facharbeit?", false)
+        p.p.p--md.text--light-gray Die folgende Gliederung hat sich für eine Facharbeit etabliert.
+        p.p.p--md.text--light-gray 1. Deckblatt   2. Inhaltsverzeichnis 3. Einleitung   4. Darstellung des Facharbeitsthemas (= Hauptteil) 5. Fazit 6. Anhang 7. Eigenständigkeitserklärung.
+
+      +faqCard("Wie lange braucht man, um eine Facharbeit zu schreiben?", true)
+        p.p.p--md.text--light-gray Diese Frage kann nicht pauschal beantwortet werden, da sich sowohl Deine Motivation als auch Deine Erfahrung bzw. Dein Wissen bezüglich der Facharbeit auf den Arbeitsprozess auswirken. Derweil arbeiten unsere Autoren höchst effizient und liefern Deine wissenschaftliche Arbeit in möglichst kurzer Zeit.
+    
     .faq__footer
+      button.btn Jetzt unverbindlich anfragen

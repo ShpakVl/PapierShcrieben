@@ -92,3 +92,15 @@ mixin articleFooter(center=false)
       - var classes = "article__footer--center"
   .article__footer(class=classes)
     block
+
+mixin faqCard(title, open=false)
+  if open
+    - var classes = 'faq__card--open'
+    - var arrowClasses = 'arrow--open'
+
+  .faq__card(class=classes)
+    .faq__card__header.arrow(class=arrowClasses)
+      h4.text--blue.text--bold=title
+    .faq__card__line
+    .faq__card__content
+      block
