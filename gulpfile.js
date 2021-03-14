@@ -5,6 +5,7 @@ const js = require('./gulp/js')
 const clean = require('./gulp/clean')
 const build = require('./gulp/build')
 const img = require('./gulp/img')
+const zip = require('./gulp/zip')
 
 const server = require('browser-sync').create()
 
@@ -44,3 +45,4 @@ module.exports.start = start
 module.exports.dev = gulp.series(build, start, watch)
 module.exports.clean = clean
 module.exports.build = build
+module.exports.zip = zip
