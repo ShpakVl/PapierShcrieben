@@ -1,10 +1,31 @@
 .carousel
+  position: relative
+  &::before
+    position: absolute
+    width: 390rem
+    height: calc(100% + 2rem)
+    right: calc(100% + 1rem)
+    content: ""
+    top: -1rem
+    background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7315301120448179) 1%, rgba(255,255,255,0.8379726890756303) 5%, rgba(255,255,255,1) 7%)
+    z-index: 10
+  &::after
+    position: absolute
+    width: 390rem
+    height: calc(100% + 2rem)
+    left: calc(100% + 1rem)
+    content: ""
+    top: -1rem
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7315301120448179) 1%, rgba(255,255,255,0.8379726890756303) 5%, rgba(255,255,255,1) 7%)
   display: flex
   gap: 2rem
-
-.carousel__item
+#feedback
+  justify-content: flex-start
+  align-items: flex-start
+.carousel__content
   display: flex
   gap: 2rem
+  transition: all 1s ease-in-out
   
 .carousel__nav_list
   display: flex
@@ -24,7 +45,7 @@
   background-color: $addBlue
 
   cursor: pointer
-
+  transition: all 0.2s linear
   &.carousel--active
     background-color: $light-blue
 
