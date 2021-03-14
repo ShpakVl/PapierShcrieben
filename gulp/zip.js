@@ -3,7 +3,7 @@ const gulpZip = require('gulp-zip')
 
 const zip = function zip()
 {
-  return gulp.src('./build/*')
+  return gulp.src('./build/**/*')
     .pipe(gulpZip('build.zip'))
 		.pipe(gulp.dest('./'))
 }
